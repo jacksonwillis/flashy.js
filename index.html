@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <title>fLaShY.JS -- Modern web design 4 the myspace generation</title>
+  <style>
+    * { margin: 0; padding: 0; }
+    body { width: 800px; margin: 15px auto; font-family: 'Comic Sans MS', 'Comic Sans', Arial, sans-serif; }
+    h1 { font-style: italic; letter-spacing: 6px; }
+    #header strong { text-decoration: underline; letter-spacing: 4px; }
+    #header code { font-size: 200%; }
+    #content { padding: 25px; }
+  </style>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script src="https://raw.github.com/jacksonwillis/flashy.js/master/flashy.js"></script>
+  <script>
+    $(function () {
+      $flashy.MY_EYES('#content', 25, 2, $flashy.grayscale);
+      $flashy.MY_EYES('#lol', 100, 10, $flashy.rainbow);
+    });
+  </script>
+ </head>
+ <body>
+<a href="https://github.com/jacksonwillis/flashy.js/"><img style="position: absolute; top: 0; right: 0; border: 0;" src="https://a248.e.akamai.net/assets.github.com/img/30f550e0d38ceb6ef5b81500c64d970b7fb0f028/687474703a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" alt="Fork me on GitHub"></a>
+
+  <div id="header">
+    <h1>Modern website design</h1>
+    <strong>brought to you by <code>flashy.js</code></strong>
+  </div>
+
+  <div id="content">
+  <h2>fLaShY.JS</h2>
+  <p>
+    <code>flashy.js</code> is a script that helps you make
+    cool animated borders, like on this page :) :) :)!!!
+    It comes with two AWESOME built-in color sets, $flashy.rainbow and $flashy.grayscale!
+    It is invoked with <strong>$flashy.MY_EYES(<em>target</em>, [options]);</strong>,
+    where <em>target</em> is the victim element!:):)!
+    flashy.js uses jQuery<em>!!!!!!!</em>
+  </p>
+
+  <h2>Example</h2>
+
+  <h3>H.T.M.L. snippet</h3>
+<pre>
+&lt;p id=&quot;lol&quot;&gt;
+  Proin vel ligula at risus adipiscing facilisis.
+  Ut dolor metus, volutpat vel congue tempor, iaculis eu lectus.
+&lt;/p&gt;
+</pre>
+
+  <h3>JavaScript snippet</h3>
+<pre>
+/*                 \/ element we are targeting
+                        \/ delay in milliseconds
+                             \/ border-width
+                                 \/ color set   */
+<strong>$flashy.MY_EYES('#lol', 100, 10, $flashy.rainbow);</strong>
+</pre>
+
+    <br>
+
+    <p id="lol">
+      Proin vel ligula at risus adipiscing facilisis.
+      Ut dolor metus, volutpat vel congue tempor, iaculis eu lectus.
+    </p>
+  </div>
+ </body>
+</html>
