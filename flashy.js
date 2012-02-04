@@ -1,14 +1,3 @@
-Array.prototype.rotate = (function () {
-  var unshift = Array.prototype.unshift,
-    splice = Array.prototype.splice;
-  return function (count) {
-    var len = this.length >>> 0,
-      count = count >> 0;
-    unshift.apply(this, splice.call(this, count % len, len));
-    return this;
-  };
-})();
-
 $flashy = {
   rainbow:   ["f00", "f60", "ff0", "6f0", "0ff", "06f", "00f"],
   grayscale: ["000", "111", "222", "333", "444", "555", "666", "777",
@@ -35,7 +24,9 @@ $flashy = {
       $('.flashy-wrapper-' + id + ' .flashy').each(function (i, el) {
         $(el).css('border', border_width + 'px solid #' + colors[i])
       });
-      colors.rotate(1);
+
+      // Rotate `colors`
+      colors.unshift.apply(colors, colors.splice(1, colors.length));
     }, time);
   }
 };
