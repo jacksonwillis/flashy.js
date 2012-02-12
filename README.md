@@ -2,7 +2,7 @@
 
 flashy.js is a script that helps you make cool animated borders :) :) :)!!!
 It comes with two AWESOME built-in color sets, `$flashy.rainbow` and `$flashy.grayscale`!
-It is invoked with $flashy.MY_EYES(target, [options]);, where target is the victim element!:):)!
+It is invoked with `$flashy.MY_EYES(target, [options]);`, where target is the victim element!:):)!
 flashy.js depends on jQuery!!!!!!!
 
 ## Example
